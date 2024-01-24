@@ -8,39 +8,45 @@ com suas rotas, na linguagem de programação Typescript
 
 ### Andamento
 
-- Modelagem do banco de dados no LucidChart [x]
-- Criar o código Base no nest [x]
-- Criar as entidades
-- Estabelecer as rotas referentes a cada requisito (função)
+- [x] Modelagem do banco de dados no LucidChart 
+- [x] Criar o código Base no nest 
+- [x] Criar as entidades 
+- [ ] Estabelecer as rotas referentes a cada requisito (função)
 
-### Requisitos
+## Rotas
 
 Cliente:
-- Cadastro (POST Usuario)
-- Visualizar Perfil (GET Usuario)
-- Visualizar Produtos (GET Produtos)
-- Visualizar Produtos de uma unidade (GET Itens_Em_Estoque com filtro por Unidade)
-- Realizar Compras:
+- [x] Cadastro
+  -  EndPoint: http://localhost:3000/usuario
+  -  Descrição: Recebe um json com (nome; tipo; email; senha;) e salva no banco de dados (listaUsuario)
+- [x] Visualizar Perfil
+  - EndPoint: http://localhost:3000/usuario/{id}
+  - Descrição: Retorna um json com os dados do cliente com aquele id
+- [ ] Visualizar Produtos (GET Produtos)
+- [ ] Visualizar Produtos de uma unidade (GET Itens_Em_Estoque com filtro por Unidade)
+- [ ] Realizar Compras:
     Realizar Comprar ( POST Pedidos)
     Adicionar na Tabela Itens_Comprados os itens do carrinho pegando o id do pedido (POST Itens_Comprados)
     Atualiza Status do Pedido (PUT Pedido)
     Limpa o carrinho (DELETE Carrinho com filtro do id Usuario)
-- Vizualizar pedidos ( GET Pedido por id usuario)
-- Recupera os pedidos do usuario
-- Inserir, editar, vizualizar e excluir produtos de um carrinho ( POST, PUT, GET, DELETE Carrinho)
-- Vizualizar cupons ( GET Cupom)
-- Vizualizar categorias ( GET Categoria)
-- Vizualizar produtos de uma categoria (GET Produtos com filtro em categoria) 
-- Vizualizar produtos com cupom (?)
-- Excluir conta (DELETE Usuario)
+- [ ] Vizualizar pedidos ( GET Pedido por id usuario)
+- [ ] Recupera os pedidos do usuario
+- [ ] Inserir, editar, vizualizar e excluir produtos de um carrinho ( POST, PUT, GET, DELETE Carrinho)
+- [ ] Vizualizar cupons ( GET Cupom)
+- [ ] Vizualizar categorias ( GET Categoria)
+- [ ] Vizualizar produtos de uma categoria (GET Produtos com filtro em categoria) 
+- [ ] Vizualizar produtos com cupom (?)
+- [ ] Excluir conta (DELETE Usuario)
 
 Vendedor:
-- Inserir, editar, vizualizar e excluir produtos ( POST, PUT, GET, DELETE Produto)
-- Vizualizar todos os clientes (Get Usuario com filtro por tipo)
-- Vizualizar os pedidos realizados (Get Pedidos)
-- Inserir, editar, vizualizar e excluir cupons ( POST, PUT, GET, DELETE Cupom)
-- Inserir, editar, vizualizar e excluir categorias para os produtos ( POST, PUT, GET, DELETE Categoria)
-- Gerenciar estoque de cada unidade ( POST, PUT, GET, DELETE Estoque)
+- [ ] Inserir, editar, vizualizar e excluir produtos ( POST, PUT, GET, DELETE Produto)
+- [x] Vizualizar todos os clientes
+  - EndPoint: http://localhost:3000/usuario/clientes
+  - Descrição: Retorna todos os usuarios do tipo cliente
+- [ ] Vizualizar os pedidos realizados (Get Pedidos)
+- [ ] Inserir, editar, vizualizar e excluir cupons ( POST, PUT, GET, DELETE Cupom)
+- [ ] Inserir, editar, vizualizar e excluir categorias para os produtos ( POST, PUT, GET, DELETE Categoria)
+- [ ] Gerenciar estoque de cada unidade ( POST, PUT, GET, DELETE Estoque)
 
 ### Modelagem:
 
