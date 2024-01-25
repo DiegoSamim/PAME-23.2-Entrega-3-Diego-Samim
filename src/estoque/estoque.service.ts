@@ -4,23 +4,28 @@ import { UpdateEstoqueDto } from './dto/update-estoque.dto';
 
 @Injectable()
 export class EstoqueService {
+  // Método para criar um novo estoque
   create(createEstoqueDto: CreateEstoqueDto) {
-    return 'This action adds a new estoque';
+    return 'Esta ação adiciona um novo estoque';
   }
 
+  // Método para obter todos os estoques
   findAll() {
-    return `This action returns all estoque`;
+    return 'Esta ação retorna todos os estoques';
   }
 
+  // Método para obter um estoque específico com base no ID
   findOne(id: number) {
-    return `This action returns a #${id} estoque`;
+    return `Esta ação retorna o estoque #${id}`;
   }
 
+  // Método para atualizar um estoque com base no ID
   update(id: number, updateEstoqueDto: UpdateEstoqueDto) {
-    return `This action updates a #${id} estoque`;
+    return `Esta ação atualiza o estoque #${id}`;
   }
 
+  // Método para remover um estoque com base no ID
   remove(id: number) {
-    return `This action removes a #${id} estoque`;
+    return `Esta ação remove o estoque #${id}`;
   }
 }

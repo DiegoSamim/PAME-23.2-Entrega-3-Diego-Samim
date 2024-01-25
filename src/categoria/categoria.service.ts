@@ -4,23 +4,28 @@ import { UpdateCategoriaDto } from './dto/update-categoria.dto';
 
 @Injectable()
 export class CategoriaService {
+  // Método para criar uma nova categoria
   create(createCategoriaDto: CreateCategoriaDto) {
-    return 'This action adds a new categoria';
+    return 'Esta ação adiciona uma nova categoria';
   }
 
+  // Método para obter todas as categorias
   findAll() {
-    return `This action returns all categoria`;
+    return 'Esta ação retorna todas as categorias';
   }
 
+  // Método para obter uma categoria por ID
   findOne(id: number) {
-    return `This action returns a #${id} categoria`;
+    return `Esta ação retorna a categoria #${id}`;
   }
 
+  // Método para atualizar uma categoria por ID
   update(id: number, updateCategoriaDto: UpdateCategoriaDto) {
-    return `This action updates a #${id} categoria`;
+    return `Esta ação atualiza a categoria #${id}`;
   }
 
+  // Método para remover uma categoria por ID
   remove(id: number) {
-    return `This action removes a #${id} categoria`;
+    return `Esta ação remove a categoria #${id}`;
   }
 }

@@ -4,23 +4,28 @@ import { UpdateCupomDto } from './dto/update-cupom.dto';
 
 @Injectable()
 export class CupomService {
+  // Método para criar um novo cupom
   create(createCupomDto: CreateCupomDto) {
-    return 'This action adds a new cupom';
+    return 'Esta ação adiciona um novo cupom';
   }
 
+  // Método para obter todos os cupons
   findAll() {
-    return `This action returns all cupom`;
+    return 'Esta ação retorna todos os cupons';
   }
 
+  // Método para obter um cupom por ID
   findOne(id: number) {
-    return `This action returns a #${id} cupom`;
+    return `Esta ação retorna o cupom #${id}`;
   }
 
+  // Método para atualizar um cupom por ID
   update(id: number, updateCupomDto: UpdateCupomDto) {
-    return `This action updates a #${id} cupom`;
+    return `Esta ação atualiza o cupom #${id}`;
   }
 
+  // Método para remover um cupom por ID
   remove(id: number) {
-    return `This action removes a #${id} cupom`;
+    return `Esta ação remove o cupom #${id}`;
   }
 }
