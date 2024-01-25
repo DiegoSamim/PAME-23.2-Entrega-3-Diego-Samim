@@ -1,26 +1,36 @@
 import { Injectable } from '@nestjs/common';
+import { Produto } from './entities/produto.entity';
 import { CreateProdutoDto } from './dto/create-produto.dto';
 import { UpdateProdutoDto } from './dto/update-produto.dto';
 
 @Injectable()
 export class ProdutoService {
-  create(createProdutoDto: CreateProdutoDto) {
-    return 'This action adds a new produto';
+  private produtosList: Produto[] = [];
+
+  create(produtoDto: CreateProdutoDto): void {
+    const produto: Produto = {
+      id_produto: this.produtosList.length + 1,
+      ...produtoDto,
+    };
+
+    this.produtosList.push(produto);
   }
 
-  findAll() {
-    return `This action returns all produto`;
+  getAllProdutos(): Produto[] {
+    return this.produtosList;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} produto`;
+  updateProduto(id: number, updateProdutosDto: UpdateProdutoDto) {
+    return `Produto com ID ${id} Atualizado com Sucesso`;
   }
 
-  update(id: number, updateProdutoDto: UpdateProdutoDto) {
-    return `This action updates a #${id} produto`;
+  removeProduto(id: number) {
+    return `Produto com ID ${id} removido`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} produto`;
+  findByCategoria(idCategoria: number): Produto[] {
+    // Exemplo básico: filtrar produtos por categoria
+    return this.produtosList.filter(produto => produto.categoria.FK === idCategoria);
   }
+
 }

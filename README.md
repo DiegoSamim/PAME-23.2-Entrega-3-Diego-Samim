@@ -22,24 +22,27 @@ Cliente:
 - [x] Visualizar Perfil
   - EndPoint: http://localhost:3000/usuario/{id}
   - Descrição: Retorna um json com os dados do cliente com aquele id
-- [ ] Visualizar Produtos (GET Produtos)
-- [ ] Visualizar Produtos de uma unidade (GET Itens_Em_Estoque com filtro por Unidade)
+- [x] Visualizar Produtos
+  - EndPoint: http://localhost:3000/produto
+  - Descrição: Retorna um json com todos os produtos
+- [x] Visualizar Produtos de uma unidade 
+  - EndPoint: http://localhost:3000/produtos-em-estoque/filtro/estoque?idEstoque=1
 - [ ] Realizar Compras:
     Realizar Comprar ( POST Pedidos)
     Adicionar na Tabela Itens_Comprados os itens do carrinho pegando o id do pedido (POST Itens_Comprados)
     Atualiza Status do Pedido (PUT Pedido)
     Limpa o carrinho (DELETE Carrinho com filtro do id Usuario)
-- [ ] Vizualizar pedidos ( GET Pedido por id usuario)
+- [] Vizualizar pedidos ( GET Pedido por id usuario)
 - [ ] Recupera os pedidos do usuario
 - [ ] Inserir, editar, vizualizar e excluir produtos de um carrinho ( POST, PUT, GET, DELETE Carrinho)
 - [ ] Vizualizar cupons ( GET Cupom)
 - [ ] Vizualizar categorias ( GET Categoria)
-- [ ] Vizualizar produtos de uma categoria (GET Produtos com filtro em categoria) 
+- [x] Vizualizar produtos de uma categoria (GET Produtos com filtro em categoria) 
 - [ ] Vizualizar produtos com cupom (?)
 - [ ] Excluir conta (DELETE Usuario)
 
 Vendedor:
-- [ ] Inserir, editar, vizualizar e excluir produtos ( POST, PUT, GET, DELETE Produto)
+- [x] Inserir, editar, vizualizar e excluir produtos ( POST, PUT, GET, DELETE Produto)
 - [x] Vizualizar todos os clientes
   - EndPoint: http://localhost:3000/usuario/clientes
   - Descrição: Retorna todos os usuarios do tipo cliente

@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
 import { ProdutosEmEstoqueService } from './produtos_em_estoque.service';
 import { CreateProdutosEmEstoqueDto } from './dto/create-produtos_em_estoque.dto';
 import { UpdateProdutosEmEstoqueDto } from './dto/update-produtos_em_estoque.dto';
@@ -30,5 +30,10 @@ export class ProdutosEmEstoqueController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.produtosEmEstoqueService.remove(+id);
+  }
+
+  @Get('filtro/estoque')
+  findPorEstoqueId(@Query('idEstoque') idEstoque: number) {
+    return this.produtosEmEstoqueService.findByEstoqueId(idEstoque);
   }
 }

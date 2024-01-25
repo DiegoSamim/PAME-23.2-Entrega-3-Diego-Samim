@@ -1,9 +1,12 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { ProdutosEmEstoque } from './entities/produtos_em_estoque.entity';
 import { CreateProdutosEmEstoqueDto } from './dto/create-produtos_em_estoque.dto';
 import { UpdateProdutosEmEstoqueDto } from './dto/update-produtos_em_estoque.dto';
 
 @Injectable()
 export class ProdutosEmEstoqueService {
+  private produtosEmEstoqueList: ProdutosEmEstoque[] = [];
+
   create(createProdutosEmEstoqueDto: CreateProdutosEmEstoqueDto) {
     return 'This action adds a new produtosEmEstoque';
   }
@@ -22,5 +25,9 @@ export class ProdutosEmEstoqueService {
 
   remove(id: number) {
     return `This action removes a #${id} produtosEmEstoque`;
+  }
+
+  findByEstoqueId(idEstoque: number): ProdutosEmEstoque[] {
+    return this.produtosEmEstoqueList.filter(prod => prod.id_estoque.FK === idEstoque);
   }
 }
